@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Validate User Login</title>
+
+<link href="web.css" rel="stylesheet" type="text/css" />
+<script type ="text/javascript" src="JScript.js"></script>
+<script type = "text/javascript">
+
+<script>
+  function validateForm()
+  { 
+
+    if(document.form1.Username.value=="")
+    { 
+      alert("User Name should not be blank.."); 
+      document.form1.Username.focus(); 
+      return false; 
+    }
+     else if(document.form1.password.value=="")
+    {
+      alert("Password should not be blank"); 
+      document.form1.password.focus(); return false; 
+    }
+
+   } 
+
+     </script> 
+
+<style>  
+     <%@ include file="web.css"%>  
+</style>
+
+
+
+<center>
+
+ 
+    <!-- This is the  page banner. -->
+<img src="webbanner.jpg" align="middle" align="top" width="600px" />
+
+
+
+<!-- This is the  page navigation2. -->
+<center>
+<div id="nav">
+<a href="Index.jsp">Home</a> | <a href="User.jsp">Edit Profile</a> | <a href="Logout.jsp">Logout</a> | <a href="Admin_Login.jsp">Admin Login</a> 
+</div></center>
+
+<div class="image">
+    <img src="webBackground2.jpg" align="middle" width="600px"/>
+    
+
+</head>
+<body>
+
+   
+    
+   
+  <div class="form1" style="color:red;" align="right" >
+    <br><br><br><br>
+    <p align="center"><form  action="JScript.js" method="get" 
+    onSubmit="return validateForm()"></p>
+
+    User Name:<input type="text" name="Username" value="" /><br>
+
+    Password : <input type="password" name="password" value="" /><br><br>
+
+    <input type="Submit" value="Login" name="Submit">
+        
+     
+    </form></div>
+     
+    </div>
+        <!-- This is the end of the login form. -->
+        
+        
+        
+   <div id="footer"><center>
+    		Copyright © J3H Ecommerce 2014, All Rights Reserved.</center>
+	</div>
+</body>
+</html>
